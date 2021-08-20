@@ -113,6 +113,7 @@ class Manager():
         self.musicstate = {}
         self.musicinfo = {}
         self.weatherinfo = {}
+        self.gps_info = {}
 
         self._theme = (
                 b'\x7b\xef'     # ble
@@ -172,6 +173,8 @@ class Manager():
         self.register('apps.faces.FacesApp', no_except=True)
         self.register('apps.settings.SettingsApp', no_except=True)
         self.register('apps.software.SoftwareApp', no_except=True)
+
+        self.register('apps.gps.GPSApp', no_except=True)
 
     def register(self, app, quick_ring=False, watch_face=False, no_except=False):
         """Register an application with the system.
@@ -334,6 +337,9 @@ class Manager():
 
     def set_weather_info(self, info):
         self.weatherinfo = info
+
+    def set_gps_info(self, info):
+        self.gps_info = info
 
     def set_alarm(self, time, action):
         """Queue an alarm.

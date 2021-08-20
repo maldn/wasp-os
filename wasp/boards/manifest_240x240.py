@@ -12,6 +12,7 @@ manifest = (
     'apps/fibonacci_clock.py',
     'apps/flashlight.py',
     'apps/gameoflife.py',
+    'apps/gps.py',
     'apps/haiku.py',
     'apps/heart.py',
     'apps/musicplayer.py',
